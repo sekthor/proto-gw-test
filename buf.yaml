@@ -1,7 +1,11 @@
 version: v2
+modules:
+  - path: api
 lint:
   use:
     - DEFAULT
+  ignore:
+    - google/api/annotations.proto
 breaking:
   use:
     - FILE

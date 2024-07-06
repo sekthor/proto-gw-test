@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.4.0
 // - protoc             (unknown)
-// source: api/greeter.proto
+// source: greeter/greeter.proto
 
 package gatewayv1
 
@@ -104,5 +104,5 @@ var Greeter_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "api/greeter.proto",
+	Metadata: "greeter/greeter.proto",
 }
