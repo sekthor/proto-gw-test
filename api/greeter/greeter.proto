@@ -10,6 +10,7 @@ service Greeter {
             post: "/v1/greet"
             body: "*"
             additional_bindings: {get: "/v1/greet/{name}"}
+            additional_bindings: {get: "/v1/greet/query"} // /v1/greet/query?name=sekthor
         };
     }
 }
