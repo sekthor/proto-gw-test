@@ -2,11 +2,11 @@
 // source: greeter/greeter.proto
 
 /*
-Package gatewayv1 is a reverse proxy.
+Package greeterv1 is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package gatewayv1
+package greeterv1
 
 import (
 	"context"
@@ -71,7 +71,7 @@ func RegisterGreeterHandlerServer(ctx context.Context, mux *runtime.ServeMux, se
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/sekthor.gateway.v1.Greeter/Greet", runtime.WithHTTPPathPattern("/sekthor.gateway.v1.Greeter/Greet"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/sekthor.protogwtest.greeter.v1.Greeter/Greet", runtime.WithHTTPPathPattern("/sekthor.protogwtest.greeter.v1.Greeter/Greet"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -135,7 +135,7 @@ func RegisterGreeterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cl
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/sekthor.gateway.v1.Greeter/Greet", runtime.WithHTTPPathPattern("/sekthor.gateway.v1.Greeter/Greet"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/sekthor.protogwtest.greeter.v1.Greeter/Greet", runtime.WithHTTPPathPattern("/sekthor.protogwtest.greeter.v1.Greeter/Greet"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -155,7 +155,7 @@ func RegisterGreeterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cl
 }
 
 var (
-	pattern_Greeter_Greet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"sekthor.gateway.v1.Greeter", "Greet"}, ""))
+	pattern_Greeter_Greet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"sekthor.protogwtest.greeter.v1.Greeter", "Greet"}, ""))
 )
 
 var (

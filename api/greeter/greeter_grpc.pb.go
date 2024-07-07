@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: greeter/greeter.proto
 
-package gatewayv1
+package greeterv1
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion8
 
 const (
-	Greeter_Greet_FullMethodName = "/sekthor.gateway.v1.Greeter/Greet"
+	Greeter_Greet_FullMethodName = "/sekthor.protogwtest.greeter.v1.Greeter/Greet"
 )
 
 // GreeterClient is the client API for Greeter service.
@@ -95,7 +95,7 @@ func _Greeter_Greet_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Greeter_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "sekthor.gateway.v1.Greeter",
+	ServiceName: "sekthor.protogwtest.greeter.v1.Greeter",
 	HandlerType: (*GreeterServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
