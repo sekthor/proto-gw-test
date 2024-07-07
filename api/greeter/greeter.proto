@@ -5,7 +5,12 @@ package sekthor.protogwtest.greeter.v1;
 import "google/api/annotations.proto";
 
 service Greeter {
-    rpc Greet(GreetingRequest) returns (GreetingResponse);
+    rpc Greet(GreetingRequest) returns (GreetingResponse) {
+        option (google.api.http) = {
+            post: "/v1/greet"
+            body: "*"
+        };
+    }
 }
 
 message GreetingRequest {
